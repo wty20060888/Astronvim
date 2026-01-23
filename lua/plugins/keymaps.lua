@@ -12,9 +12,9 @@ return {
           ["L"] = { "$", desc = "Move to the end of the line" },
           ["J"] = { "5j", desc = "Move up 5 lines" },
           ["K"] = { "5k", desc = "Move down 5 lines" },
-          ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = "sendline" },
-          ["<leader>ju"] = { ":IronRepl<cr>", desc = "toggle iron" },
-          ["<leader>am"] = { ":MPRepl<cr>", desc = "toggle MPRepl" },
+          ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = "Sendline" },
+          ["<leader>ju"] = { ":IronRepl<cr>", desc = "Toggle Iron" },
+          ["<leader>am"] = { ":MPRepl<cr>", desc = "Toggle MPRepl" },
         },
         t = {
           ["H"] = { "0", desc = "Move to the beginning of the line" },
