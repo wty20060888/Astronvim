@@ -1,11 +1,22 @@
 -- 在对应的配置文件中对 which-key 进行配置
 return {
   "folke/which-key.nvim",
-  opts = {
-    keys = {
-      scroll_down = "<C-j>", -- 新的向下滚动快捷键
-      scroll_up = "<C-k>", -- 新的向上滚动快捷键
-    },
-    -- 其他 which-key 配置...
-  },
+  opts = function(_, opts)
+    -- opts 是已经合并了默认值的配置
+    opts.keys = {
+      scroll_down = "<C-j>",
+      scroll_up = "<C-k>",
+    }
+    return opts
+  end,
 }
+-- 或者写成
+-- return {
+--  "folke/which-key.nvim",
+--  opts = {
+--    keys = {
+--      scroll_down = "<C-j>",  -- 修改滚动快捷键
+--      scroll_up = "<C-k>",    -- 修改滚动快捷键
+--    },
+--  },
+-- }
