@@ -16,4 +16,7 @@ return {
   { import = "astrocommunity.git.diffview-nvim" },
   -- Pack
   { import = "astrocommunity.pack.python" },
+  -- Markdown
+  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 }
