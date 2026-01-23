@@ -4,8 +4,8 @@ return {
   opts = function(_, opts)
     -- opts 是已经合并了默认值的配置
     opts.keys = {
-      scroll_down = "<C-j>",
-      scroll_up = "<C-k>",
+      scroll_down = "<A-j>",
+      scroll_up = "<A-k>",
     }
     return opts
   end,
