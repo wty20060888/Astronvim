@@ -2,8 +2,10 @@ return {
   "blink.cmp",
   opts = {
     keymap = {
-      ["<A-k>"] = { "scroll_documentation_up", "fallback" },
-      ["<A-j>"] = { "scroll_documentation_down", "fallback" },
+      ["<A-k>"] = {
+        function() require("blink.cmp").scroll_documentation_up(1) end,
+      },
+      ["<A-j>"] = { function() require("blink.cmp").scroll_documentation_down(1) end },
     },
   },
 }
