@@ -22,6 +22,19 @@ if not pcall(require, "lazy") then
   vim.fn.getchar()
   vim.cmd.quit()
 end
+-- Neovide
+if vim.g.neovide then
+  -- Put anything you want to happen only in Neovide here
+  vim.o.guifont = "MesloLGS Nerd Font:b" -- text below applies for VimScript
+  vim.g.neovide_scale_factor = 1.6
+  vim.g.neovide_opacity = 0.8
+  vim.g.neovide_normal_opacity = 0.8
+  vim.g.neovide_title_background_color =
+    string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name "Normal" }).bg)
+
+  vim.g.neovide_title_text_color = "pink"
+  vim.g.neovide_window_blurred = true
+end
 
 require "lazy_setup"
 require "polish"
