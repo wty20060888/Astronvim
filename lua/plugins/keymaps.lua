@@ -47,7 +47,7 @@ return {
               -- 需要正确转译keys
               vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(keys, true, false, true), "n", false)
             end,
-            desc = "sendvisual",
+            desc = "Sendvisual",
           },
         },
       },

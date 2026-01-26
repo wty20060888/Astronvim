@@ -27,11 +27,6 @@ return {
         -- vim.cmd("split | ter " .. repl_assembled_command)
         vim.cmd("vsplit | ter " .. repl_assembled_command)
       end
-      pyright_config.TEMPLATES.pyright_config = [[
-      {
-        "reportMissingImports": false
-      }
-      ]]
     end,
   },
 }
