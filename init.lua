@@ -25,8 +25,8 @@ end
 -- Neovide
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
-  vim.o.guifont = "MesloLGS Nerd Font:b" -- text below applies for VimScript
-  vim.g.neovide_scale_factor = 1.6
+  vim.o.guifont = "MesloLGS Nerd Font:h26:b" -- text below applies for VimScript
+  -- vim.g.neovide_scale_factor = 1.6
   vim.g.neovide_opacity = 0.8
   vim.g.neovide_normal_opacity = 0.8
   vim.g.neovide_title_background_color =
