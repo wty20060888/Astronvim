@@ -14,7 +14,53 @@ return {
           ["K"] = { "5k", desc = "Move down 5 lines" },
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = "Sendline" },
           ["<leader>ju"] = { ":IronRepl<cr>", desc = "Toggle Iron" },
-          ["<leader>mp"] = { ":MPRepl<cr>", desc = "Toggle MPRepl" },
+          ["<leader>mp"] = {
+            function()
+              -- 获取所有缓冲区的列表
+              local buffers = vim.api.nvim_list_bufs()
+              local repl_exists = false
+
+              -- 检查是否有缓冲区名称包含 'mpremote'
+              for _, buf in ipairs(buffers) do
+                if vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_name(buf):match "mpremote" then
+                  repl_exists = true
+                  break
+                end
+              end
+
+              -- 根据检查结果执行相应的操作
+              if repl_exists then
+                -- 如果 REPL 存在，关闭 REPL
+                for _, buf in ipairs(buffers) do
+                  if vim.api.nvim_buf_get_name(buf):match "mpremote" then
+                    -- 使用 feedkeys 模拟按键操作
+                    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-w>l", true, false, true), "n", true)
+                    --vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i<C-x><Cr><C-\\><C-n>", true, false, true), "n", true)
+                    vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i<C-x><cr>", true, false, true), "n", true)
+                    vim.defer_fn(
+                      function()
+                        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<cr>", true, false, true), "n", true)
+                      end,
+                      1200
+                    ) -- 延时3000毫秒（3秒,ESP关闭速度较慢）
+                    print "REPL 已关闭"
+                    break
+                  end
+                end
+              else
+                -- 如果 REPL 不存在，打开 MPRepl
+                vim.cmd "MPRepl"
+                -- 切换到插入模式并移动光标
+                vim.api.nvim_feedkeys(
+                  vim.api.nvim_replace_termcodes("i<C-\\><C-N><C-w>h", true, false, true),
+                  "n",
+                  true
+                )
+                print "REPL 已打开"
+              end
+            end,
+            desc = "Toggle MPRepl",
+          },
         },
         t = {
           ["H"] = { "0", desc = "Move to the beginning of the line" },
