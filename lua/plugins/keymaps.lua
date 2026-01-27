@@ -41,8 +41,8 @@ return {
                       function()
                         vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<cr>", true, false, true), "n", true)
                       end,
-                      1200
-                    ) -- 延时3000毫秒（3秒,ESP关闭速度较慢）
+                      800
+                    ) -- 延时800毫秒（ESP关闭速度较慢）
                     print "REPL 已关闭"
                     break
                   end
