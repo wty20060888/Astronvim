@@ -81,7 +81,7 @@ return {
           local files = list_files_in_directory ""
 
           -- 当前目录的绝对路径
-          local current_path = "/" -- 初始化为根目录
+          local current_path = "./" -- 初始化为根目录
 
           -- Function to handle file selection
           local function handle_selection(selected)
