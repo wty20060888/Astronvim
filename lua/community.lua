@@ -11,6 +11,7 @@ return {
   -- import/override with your plugins folder
   -- Themes
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
   -- Gits
   { import = "astrocommunity.git.codediff-nvim" },
   { import = "astrocommunity.git.diffview-nvim" },

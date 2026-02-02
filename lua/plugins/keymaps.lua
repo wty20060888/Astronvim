@@ -96,6 +96,12 @@ return {
             desc = "Sendvisual",
           },
         },
+        o = {
+          ["H"] = { "0", desc = "Beginning of the line" },
+          ["L"] = { "$", desc = "End of the line" },
+          ["J"] = { "5j", desc = "Up 5 lines" },
+          ["K"] = { "5k", desc = "Down 5 lines" },
+        },
       },
       autocmds = {
         -- TODO:测试在自动命令下，keymap映射
