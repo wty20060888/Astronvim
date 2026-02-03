@@ -1,0 +1,24 @@
+-- TODO: 用户自定义命令
+return {
+  -- vim.api.nvim_create_user_command(
+  --   "HelloAstroNvim",
+  --   function(opts) -- 注意这里的 opts 参数，用于接收命令后的输入
+  --     local message = opts.args ~= "" and opts.args or "hello astronvim"
+  --     vim.notify(message)
+  --   end,
+  --   {
+  --     desc = "Print a greeting, default is 'hello astronvim'",
+  --     nargs = "?", -- 表示命令接受0个或1个参数
+  --   }
+  -- ),
+  -- vim.api.nvim_create_user_command(
+  --   "HelloNvim",
+  --   function() -- 注意这里的 opts 参数，用于接收命令后的输入
+  --     vim.notify "hha"
+  --   end,
+  --   {
+  --     desc = "Print a greeting, default is 'hello astronvim'",
+  --     nargs = "?", -- 表示命令接受0个或1个参数
+  --   }
+  -- ),
+}
