@@ -13,7 +13,9 @@ return {
           ["J"] = { "5j", desc = "Move up 5 lines" },
           ["K"] = { "5k", desc = "Move down 5 lines" },
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = "Sendline" },
-          ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Iron" },
+          ["<leader>j"] = { "", desc = " Jupyter" },
+          ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
+          ["<leader>m"] = { "", desc = " Microchip" },
           ["<leader>mp"] = {
             function()
               -- 获取所有缓冲区的列表
