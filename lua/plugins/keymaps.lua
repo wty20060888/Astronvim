@@ -15,6 +15,7 @@ return {
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " Sendline" },
           ["<leader>j"] = { "", desc = " Jupyter" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
+          -- Micropython
           ["<leader>m"] = { "", desc = " Microchip" },
           ["<leader>mp"] = {
             function()
