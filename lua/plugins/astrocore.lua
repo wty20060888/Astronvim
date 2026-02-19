@@ -45,7 +45,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = true, -- sets vim.opt.wrap
-        scrolloff = 5, -- keep 5 height offset from above and bottom
+        scrolloff = 8, -- keep 8 height offset from above and bottom
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
