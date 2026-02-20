@@ -12,11 +12,11 @@ return {
           ["L"] = { "$", desc = "Move to the end of the line" },
           ["J"] = { "5j", desc = "Move up 5 lines" },
           ["K"] = { "5k", desc = "Move down 5 lines" },
-          ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " Sendline" },
-          ["<leader>j"] = { "", desc = " Jupyter" },
+          ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " SendToREPL" },
+          ["<leader>j"] = { desc = " Jupyter" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
-          ["<leader>m"] = { "", desc = " Microchip" },
+          ["<leader>m"] = { desc = " Microchip" },
           ["<leader>mp"] = {
             function()
               -- 获取所有缓冲区的列表

@@ -46,7 +46,7 @@ return {
           cr = "<space>s<cr>",
           interrupt = "<space>s<space>",
           exit = "<space>sq",
-          clear = "<space>cl",
+          clear = "<space>sr",
         },
         highlight = {
           italic = true,
