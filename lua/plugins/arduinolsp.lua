@@ -1,4 +1,7 @@
+if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 -- FIXME:arduino_language_server 问题
+
+---@type LazySpec
 return {
   "AstroNvim/astrolsp",
   -- we need to use the function notation to get access to the `lspconfig` module
