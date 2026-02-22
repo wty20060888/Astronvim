@@ -14,6 +14,7 @@ return {
           ["K"] = { "5k", desc = "Move down 5 lines" },
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " SendToREPL" },
           ["<leader>j"] = { desc = " Jupyter" },
+          ["<leader>a"] = { desc = " Arduino" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
           ["<leader>m"] = { desc = " Microchip" },
