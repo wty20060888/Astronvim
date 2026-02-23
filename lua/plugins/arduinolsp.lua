@@ -1,7 +1,5 @@
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 -- FIXME:arduino_language_server 问题
-
----@type LazySpec
 return {
   "AstroNvim/astrolsp",
   -- we need to use the function notation to get access to the `lspconfig` module
@@ -17,11 +15,15 @@ return {
       arduino_language_server = {
         -- the command for starting the server
         cmd = {
-          "/Users/wangtianyu/.local/share/nvim/mason/packages/arduino-language-server/arduino-language-server",
+          "arduino-language-server",
           "-cli-config",
-          "/Users/wangtianyu/.arduinoIDE/arduino-cli.yaml",
+          "/Users/wangtianyu/Library/Arduino15/arduino-cli.yaml",
           "-fqbn",
-          "arduino:esp32:nano_nora",
+          "arduino:avr:uno",
+          "-cli",
+          "arduino-cli",
+          "-clangd",
+          "clangd",
         },
         -- the filetypes to attach the server to
         filetypes = { "arduino" },
