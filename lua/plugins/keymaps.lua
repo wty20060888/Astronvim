@@ -69,6 +69,7 @@ return {
           ["<leader>mu"] = { ":MPUpload<cr>", desc = "Upload Current File" },
           ["<leader>ma"] = { ":MPUploadAll<cr>", desc = "Upload All Files" },
           ["<leader>ms"] = { ":MPSetPort<cr>", desc = "Setup Port" },
+          ["<leader>mb"] = { ":MPSetBaud<cr>", desc = "Setup Baud" },
           ["<leader>mi"] = { ":MPInit<cr>", desc = "Init Project" },
         },
         t = {
