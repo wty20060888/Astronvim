@@ -18,7 +18,7 @@ return {
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
           ["<leader>m"] = { desc = " Microchip" },
-          ["<leader>mp"] = {
+          ["<leader>mc"] = {
             function()
               -- 获取所有缓冲区的列表
               local buffers = vim.api.nvim_list_bufs()
@@ -68,7 +68,7 @@ return {
           ["<leader>ml"] = { ":MPListFiles<cr>", desc = "List Device Files" },
           ["<leader>mu"] = { ":MPUpload<cr>", desc = "Upload Current File" },
           ["<leader>ma"] = { ":MPUploadAll<cr>", desc = "Upload All Files" },
-          ["<leader>ms"] = { ":MPSetPort<cr>", desc = "Setup Port" },
+          ["<leader>mp"] = { ":MPSetPort<cr>", desc = "Setup Port" },
           ["<leader>mb"] = { ":MPSetBaud<cr>", desc = "Setup Baud" },
           ["<leader>mi"] = { ":MPInit<cr>", desc = "Init Project" },
         },

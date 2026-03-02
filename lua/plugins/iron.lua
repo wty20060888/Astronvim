@@ -40,7 +40,7 @@ return {
           send_line = "<space>sl",
           send_until_cursor = "<space>su",
           send_mark = "<space>sm",
-          mark_motion = "<space>mc",
+          -- mark_motion = "<space>mc",
           mark_visual = "<space>mc",
           remove_mark = "<space>md",
           cr = "<space>s<cr>",
