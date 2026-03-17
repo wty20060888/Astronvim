@@ -33,7 +33,7 @@ return {
         file:close()
       end
 
-      -- 6. 完成提示
+      -- 5. 完成提示
       vim.notify("✅ Arduino Uno 工程初始化完成！", vim.log.levels.SUCCESS)
     end,
     {
@@ -46,13 +46,10 @@ return {
     function(opts) -- 注意这里的 opts 参数，用于接收命令后的输入
       -- 1. 编译 PlatformIO Uno 工程
       vim.cmd "silent wall"
-      vim.cmd "!pio run -d ../"
+      vim.cmd "!pio run"
 
       -- 2. 上传PlatformIO Uno 工程
-      vim.cmd "!pio run --target upload -d ../"
-
-      -- 3. 完成提示
-      vim.notify("✅ Arduino Uno 工程上传完成！", vim.log.levels.SUCCESS)
+      vim.cmd "!pio run --target upload"
     end,
     {
       desc = "Upload Arduino Project",
