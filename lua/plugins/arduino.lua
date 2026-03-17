@@ -41,11 +41,10 @@ return {
   vim.api.nvim_create_user_command(
     "Pioupload",
     function(opts) -- 注意这里的 opts 参数，用于接收命令后的输入
-      -- 1. 编译 PlatformIO Uno 工程
+      -- 1. 保存项目
       vim.cmd "silent wall"
-      vim.cmd "!pio run"
 
-      -- 2. 上传PlatformIO Uno 工程
+      -- 2. 编译并上传PlatformIO Uno 工程
       vim.cmd "!pio run --target upload"
     end,
     {
