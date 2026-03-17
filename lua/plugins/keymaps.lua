@@ -15,6 +15,8 @@ return {
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " SendToREPL" },
           ["<leader>j"] = { desc = " Jupyter" },
           ["<leader>a"] = { desc = " Arduino" },
+          ["<leader>ai"] = { ":Pioinit<cr>", desc = "Init Project" },
+          ["<leader>au"] = { ":Pioupload<cr>", desc = "Upload Project" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
           ["<leader>m"] = { desc = " Microchip" },
