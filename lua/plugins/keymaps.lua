@@ -18,6 +18,7 @@ return {
           ["<leader>ai"] = { ":Pioinit<cr>", desc = "Init Project" },
           ["<leader>au"] = { ":Pioupload<cr>", desc = "Upload Project" },
           ["<leader>ac"] = { ":Pioclean<cr>", desc = "Clean Build" },
+          ["<leader>ad"] = { ":Piocompiledb<cr>", desc = "Compile Database" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
           ["<leader>m"] = { desc = " MicroPython" },
