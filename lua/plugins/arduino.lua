@@ -52,4 +52,18 @@ return {
       nargs = "?", -- 表示命令接受0个或1个参数
     }
   ),
+  vim.api.nvim_create_user_command(
+    "Pioclean",
+    function(opts) -- 注意这里的 opts 参数，用于接收命令后的输入
+      -- 1. 保存项目
+      vim.cmd "silent wall"
+
+      -- 2. 清理编译
+      vim.cmd "!pio run --target clean"
+    end,
+    {
+      desc = "Clean Build",
+      nargs = "?", -- 表示命令接受0个或1个参数
+    }
+  ),
 }
