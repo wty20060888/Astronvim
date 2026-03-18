@@ -14,12 +14,12 @@ return {
           ["K"] = { "5k", desc = "Move down 5 lines" },
           ["<leader>s"] = { "yy<C-w>lpi<cr><C-\\><C-N><C-w>h", desc = " SendToREPL" },
           ["<leader>j"] = { desc = " Jupyter" },
-          ["<leader>a"] = { desc = " Arduino" },
+          ["<leader>a"] = { desc = " ArduinoPlatformIO" },
           ["<leader>ai"] = { ":Pioinit<cr>", desc = "Init Project" },
           ["<leader>au"] = { ":Pioupload<cr>", desc = "Upload Project" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
-          ["<leader>m"] = { desc = " Microchip" },
+          ["<leader>m"] = { desc = " MicroPython" },
           ["<leader>mc"] = {
             function()
               -- 获取所有缓冲区的列表
