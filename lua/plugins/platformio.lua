@@ -10,27 +10,6 @@ return {
         -- 1. 初始化 PlatformIO 工程
         vim.fn.system("pio project init --board=" .. board)
         vim.fn.system "pio run -t compiledb"
-        -- 2. 定义 main.cpp 示例代码内容
-        local main_code = table.concat({
-          "#include <Arduino.h>",
-          "void setup() {",
-          "    pinMode(LED_BUILTIN, OUTPUT);",
-          "    Serial.begin(9600);",
-          "}",
-          "void loop() {",
-          "    digitalWrite(LED_BUILTIN, HIGH);",
-          "    delay(1000);",
-          "    digitalWrite(LED_BUILTIN, LOW);",
-          "    delay(1000);",
-          "}",
-        }, "\n")
-
-        -- 3. 写入代码到 src/main.cpp
-        local file = io.open("src/main.cpp", "w")
-        if file then
-          file:write(main_code)
-          file:close()
-        end
       end)
     end,
     {
@@ -91,6 +70,20 @@ return {
     end,
     {
       desc = "Build",
+      nargs = "?", -- 表示命令接受0个或1个参数
+    }
+  ),
+  vim.api.nvim_create_user_command(
+    "Piomonitor",
+    function(opts) -- 注意这里的 opts 参数，用于接收命令后的输入
+      -- 1. 保存项目
+      vim.cmd "silent wall"
+
+      -- 2. 编译数据
+      vim.cmd "10split | terminal pio run -t monitor"
+    end,
+    {
+      desc = "Monitor",
       nargs = "?", -- 表示命令接受0个或1个参数
     }
   ),

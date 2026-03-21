@@ -20,6 +20,7 @@ return {
           ["<leader>ac"] = { ":Pioclean<cr>", desc = "Clean Build" },
           ["<leader>ad"] = { ":Piocompiledb<cr>", desc = "Compile Database" },
           ["<leader>ab"] = { ":Piobuild<cr>", desc = "Build" },
+          ["<leader>am"] = { ":Piomonitor<cr>", desc = "Monitor" },
           ["<leader>jc"] = { ":IronRepl<cr>", desc = "Toggle Console" },
           -- Micropython
           ["<leader>m"] = { desc = " MicroPython" },
