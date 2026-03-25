@@ -79,10 +79,33 @@ return {
           ["<leader>mi"] = { ":MPInit<cr>", desc = "Init Project" },
         },
         t = {
-          ["H"] = { "0", desc = "Move to the beginning of the line" },
-          ["L"] = { "$", desc = "Move to the end of the line" },
-          ["J"] = { "5j", desc = "Move up 5 lines" },
-          ["K"] = { "5k", desc = "Move down 5 lines" },
+          ["H"] = {
+            function()
+              -- 判断：当前终端是否处于 普通模式（可移动光标）
+              return vim.b.term_mode == 1 and "0" or "H"
+            end,
+            desc = "终端：普通模式=行首，插入模式=输入H",
+            expr = true, -- 关键：表达式映射
+            noremap = true,
+          },
+          ["L"] = {
+            function() return vim.b.term_mode == 1 and "$" or "L" end,
+            desc = "终端：普通模式=行尾，插入模式=输入L",
+            expr = true,
+            noremap = true,
+          },
+          ["J"] = {
+            function() return vim.b.term_mode == 1 and "5j" or "J" end,
+            desc = "终端：普通模式=下移5行，插入模式=输入J",
+            expr = true,
+            noremap = true,
+          },
+          ["K"] = {
+            function() return vim.b.term_mode == 1 and "5k" or "K" end,
+            desc = "终端：普通模式=上移5行，插入模式=输入K",
+            expr = true,
+            noremap = true,
+          },
         },
         v = {
           ["H"] = { "0", desc = "Move to the beginning of the line" },
